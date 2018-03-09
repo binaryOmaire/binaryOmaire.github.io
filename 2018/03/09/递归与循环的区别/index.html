@@ -81,13 +81,13 @@
 
 <meta name="description" content="递归的基本概念:程序调用自身的编程技巧称为递归,是函数自己调用自己. 一个函数在其定义中直接或间接调用自身的一种方法,它通常把一个大型的复杂的问题转化为一个与原问题相似的规模较小的问题来解决,可以极大的减少代码量.递归的能力在于用有限的语句来定义对象的无限集合. 使用递归要注意的有两点: 1)递归就是在过程或函数里面调用自身; 2)在使用递归时,必须有一个明确的递归结束条件,称为递归出口. 递归分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="递归和循环">
-<meta property="og:url" content="http://yoursite.com/2018/03/01/xvc/index.html">
+<meta property="og:title" content="递归与循环的区别 ">
+<meta property="og:url" content="http://yoursite.com/2018/03/09/递归与循环的区别/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="递归的基本概念:程序调用自身的编程技巧称为递归,是函数自己调用自己. 一个函数在其定义中直接或间接调用自身的一种方法,它通常把一个大型的复杂的问题转化为一个与原问题相似的规模较小的问题来解决,可以极大的减少代码量.递归的能力在于用有限的语句来定义对象的无限集合. 使用递归要注意的有两点: 1)递归就是在过程或函数里面调用自身; 2)在使用递归时,必须有一个明确的递归结束条件,称为递归出口. 递归分">
-<meta property="og:updated_time" content="2018-03-09T11:51:48.306Z">
+<meta property="og:updated_time" content="2018-03-09T12:04:08.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="递归和循环">
+<meta name="twitter:title" content="递归与循环的区别 ">
 <meta name="twitter:description" content="递归的基本概念:程序调用自身的编程技巧称为递归,是函数自己调用自己. 一个函数在其定义中直接或间接调用自身的一种方法,它通常把一个大型的复杂的问题转化为一个与原问题相似的规模较小的问题来解决,可以极大的减少代码量.递归的能力在于用有限的语句来定义对象的无限集合. 使用递归要注意的有两点: 1)递归就是在过程或函数里面调用自身; 2)在使用递归时,必须有一个明确的递归结束条件,称为递归出口. 递归分">
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/01/xvc/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/09/递归与循环的区别/"/>
 
 
 
 
 
-  <title>递归和循环 | Hexo</title>
+  <title>递归与循环的区别  | Hexo</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/xvc/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/递归与循环的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">递归和循环</h1>
+          <h1 class="post-title" itemprop="name headline">递归与循环的区别 </h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T16:46:19+08:00">
-                2018-03-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-09T20:03:16+08:00">
+                2018-03-09
               </time>
             
 
@@ -311,10 +311,10 @@
 <p>fib(0)=0;</p>
 <p>fib(1)=1;</p>
 <p>fib(n)=fib(n-1)+fib(n-2);</p>
-<p>[cpp] view plain copy<br>int fib(int n)<br>{<br>   if(0 == n)<br>       return 0;<br>   if(1 == n)<br>       return 1;<br>   if(n &gt; 1)<br>       return fib(n-1)+fib(n-2);<br>}<br>上面就是一个简单的递归调用了.由于递归引起一系列的函数调用,并且有可能会有一系列的重复计算,递归算法的执行效率相对较低.</p>
+<p>int fib(int n)<br>{<br>   if(0 == n)<br>       return 0;<br>   if(1 == n)<br>       return 1;<br>   if(n &gt; 1)<br>       return fib(n-1)+fib(n-2);<br>}<br>上面就是一个简单的递归调用了.由于递归引起一系列的函数调用,并且有可能会有一系列的重复计算,递归算法的执行效率相对较低.</p>
 <p>迭代:利用变量的原值推算出变量的一个新值.如果递归是自己调用自己的话,迭代就是A不停的调用B.</p>
 <p>递归中一定有迭代,但是迭代中不一定有递归,大部分可以相互转换.能用迭代的不用递归,递归调用函数,浪费空间,并且递归太深容易造成堆栈的溢出.</p>
-<p>[cpp] view plain copy<br>//这是递归<br>int funcA(int n)<br>{<br>    if(n &gt; 1)<br>       return n+funcA(n-1);<br>    else<br>       return 1;<br>}<br>//这是迭代<br>int funcB(int n)<br>{<br>    int i,s=0;<br>    for(i=1;i&lt;n;i++)<br>       s+=i;<br>    return s;<br>}  </p>
+<p>//这是递归<br>int funcA(int n)<br>{<br>    if(n &gt; 1)<br>       return n+funcA(n-1);<br>    else<br>       return 1;<br>}<br>//这是迭代<br>int funcB(int n)<br>{<br>    int i,s=0;<br>    for(i=1;i&lt;n;i++)<br>       s+=i;<br>    return s;<br>}  </p>
 
       
     </div>
@@ -348,10 +348,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/09/递归的循环的区别/" rel="prev" title="递归的循环的区别">
-                递归的循环的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -419,7 +415,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
