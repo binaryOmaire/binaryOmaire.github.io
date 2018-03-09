@@ -81,7 +81,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
@@ -114,13 +114,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2018/03/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Archiv | Hexo</title>
   
 
 
@@ -139,8 +139,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,267 +212,75 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
+
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        Öhm..! Insgesamt 2 Artikel. Bleib dran.
+      </span>
+
       
 
-  
+        
+        
+        
 
-  
-  
-  
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/递归与循环的区别/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/09/递归与循环的区别/" itemprop="url">递归与循环的区别 </a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/03/09/递归与循环的区别/" itemprop="url">
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span itemprop="name">递归与循环的区别 </span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-09T20:03:16+08:00">
-                2018-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
+            </a>
         
-          
-            <p>递归的基本概念:程序调用自身的编程技巧称为递归,是函数自己调用自己.</p>
-<p>一个函数在其定义中直接或间接调用自身的一种方法,它通常把一个大型的复杂的问题转化为一个与原问题相似的规模较小的问题来解决,可以极大的减少代码量.递归的能力在于用有限的语句来定义对象的无限集合.</p>
-<p>使用递归要注意的有两点:</p>
-<p>1)递归就是在过程或函数里面调用自身;</p>
-<p>2)在使用递归时,必须有一个明确的递归结束条件,称为递归出口.</p>
-<p>递归分为两个阶段:</p>
-<p>1)递推:把复杂的问题的求解推到比原问题简单一些的问题的求解;</p>
-<p>2)回归:当获得最简单的情况后,逐步返回,依次得到复杂的解.</p>
-<p>利用递归可以解决很多问题:如背包问题,汉诺塔问题,…等.</p>
-<p>斐波那契数列为:0,1,1,2,3,5…</p>
-<p>fib(0)=0;</p>
-<p>fib(1)=1;</p>
-<p>fib(n)=fib(n-1)+fib(n-2);</p>
-<p>int fib(int n)<br>{<br>   if(0 == n)<br>       return 0;<br>   if(1 == n)<br>       return 1;<br>   if(n &gt; 1)<br>       return fib(n-1)+fib(n-2);<br>}<br>上面就是一个简单的递归调用了.由于递归引起一系列的函数调用,并且有可能会有一系列的重复计算,递归算法的执行效率相对较低.</p>
-<p>迭代:利用变量的原值推算出变量的一个新值.如果递归是自己调用自己的话,迭代就是A不停的调用B.</p>
-<p>递归中一定有迭代,但是迭代中不一定有递归,大部分可以相互转换.能用迭代的不用递归,递归调用函数,浪费空间,并且递归太深容易造成堆栈的溢出.</p>
-<p>//这是递归<br>int funcA(int n)<br>{<br>    if(n &gt; 1)<br>       return n+funcA(n-1);<br>    else<br>       return 1;<br>}<br>//这是迭代<br>int funcB(int n)<br>{<br>    int i,s=0;<br>    for(i=1;i&lt;n;i++)<br>       s+=i;<br>    return s;<br>}  </p>
+      </h2>
 
-          
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-09T20:03:16+08:00"
+              content="2018-03-09" >
+          03-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
       
+
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-      
 
   
 
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/30/my-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/30/my-first-blog/" itemprop="url">my first blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-30T16:09:54+08:00">
-                2018-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Hello,everyone.<br>This is the first blog of the most handsome man.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
