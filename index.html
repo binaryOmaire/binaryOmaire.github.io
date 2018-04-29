@@ -228,6 +228,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/Tab页中保存按钮居中问题（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/29/Tab页中保存按钮居中问题（一）/" itemprop="url">Tab页中保存按钮居中问题（一）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-29T18:17:15+08:00">
+                2018-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题描述：在占81%的页面内（偏右），只有form（width默认100%），保存按钮右偏。<br>解决方法：form外加一层设置了宽度的div，则保存按钮居中。<br>解决方法理由：因为div中的width保证了在81%的内部居中。而不是只有form的100%页面居中。</p>
+<pre><code>&lt;html&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .right{ 
+            width: 81%;
+        }
+    &lt;/style&gt;
+
+    &lt;body class=&quot;right&quot;&gt;
+        &lt;div class=&quot;right&quot;&gt;
+            &lt;form&gt;
+                &lt;table&gt;                  
+                &lt;/table&gt;
+                &lt;div align=&quot;center&quot;&gt;
+                    &lt;input type=&quot;button&quot; value=&quot;保存&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/Tab页tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -638,7 +777,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
